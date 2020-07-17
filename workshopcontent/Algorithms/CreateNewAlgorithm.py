@@ -8,9 +8,9 @@ args = parser.parse_args()
 
 if args.name:
     newName = str(args.name)
-    print '\nNew Algorithm name: ' + newName + 'Algorithm'
+    print ('\nNew Algorithm name: ' + newName + 'Algorithm')
 else:
-    print args.echo
+    print (args.echo)
     exit
 
 for extension in ['cc', 'h']:
@@ -34,8 +34,8 @@ updatedInclude = includeInput.replace("Template", newName)
 updatedRegister = registerAlgorithm.replace("Template", newName)
 updatedXml = xmlSettings.replace("Template", newName)
 
-print '\n--in workshopcontent/Test/PandoraWorkshop.cc\n'
-print '\t' + updatedInclude + '\n'
-print '\t' + updatedRegister + '\n'
-print '\n--in scripts/PandoraSettings_Workshop.xml\n'
-print '\t' + updatedXml + '\n'
+print ('\n--in workshopcontent/Test/PandoraWorkshop.cc\n')
+print ('\t' + updatedInclude + '\n')
+print ('\t' + updatedRegister + '\n')
+print ('\n--in scripts/PandoraSettings_Workshop.xml\n')
+print ('\t' + updatedXml + '\n')

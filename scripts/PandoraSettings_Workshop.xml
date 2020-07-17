@@ -1,0 +1,110 @@
+<pandora>
+    <!-- GLOBAL SETTINGS -->
+    <IsMonitoringEnabled>true</IsMonitoringEnabled>
+    <ShouldDisplayAlgorithmInfo>true</ShouldDisplayAlgorithmInfo>
+    <SingleHitTypeClusteringMode>true</SingleHitTypeClusteringMode>
+
+    <!-- ALGORITHM SETTINGS -->
+    <algorithm type = "LArEventReading">
+        <EventFileNameList>/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/scripts/Pandora_Events_100_0.pndr</EventFileNameList>
+        <GeometryFileName>/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/scripts/PandoraGeometry_DUNEFD_1x2x6.xml</GeometryFileName>
+        <SkipToEvent>0</SkipToEvent>
+        <UseLArCaloHits>true</UseLArCaloHits>
+    </algorithm>
+
+    <!-- LAR TPC EVENT RECONSTRUCTION -->
+    <algorithm type = "LArPreProcessing">
+        <OutputCaloHitListNameU>CaloHitListU</OutputCaloHitListNameU>
+        <OutputCaloHitListNameV>CaloHitListV</OutputCaloHitListNameV>
+        <OutputCaloHitListNameW>CaloHitListW</OutputCaloHitListNameW>
+        <FilteredCaloHitListName>CaloHitList2D</FilteredCaloHitListName>
+        <CurrentCaloHitListReplacement>CaloHitList2D</CurrentCaloHitListReplacement>
+    </algorithm>
+
+
+
+	<!--
+    <algorithm type = "LArClusteringParent">
+	    <algorithm type = "LArTrackClusterCreation" description = "ClusterFormation"/>
+	    <InputCaloHitListName>CaloHitListW</InputCaloHitListName>
+	    <ClusterListName>MyFirstClustersW</ClusterListName>
+	    <ReplaceCurrentCaloHitList>false</ReplaceCurrentCaloHitList>
+	    <ReplaceCurrentClusterList>true</ReplaceCurrentClusterList>
+    </algorithm>
+    -->
+
+	
+
+    <algorithm type = "MyTest">
+	    <MyMandatoryString>TestString</MyMandatoryString>
+	    <MyOptionalUnsignedInt>10</MyOptionalUnsignedInt>
+	    <MyMandatoryFloatVector>0. 1.5 3.0 4.5</MyMandatoryFloatVector>
+	    <OutputClusterListName>MyFirstClustersW</OutputClusterListName>
+	    <InputCaloHitListName>CaloHitListW</InputCaloHitListName>
+    </algorithm>
+
+
+    <algorithm type = "LArMCParticleMonitoring">
+        <CaloHitListName>CaloHitListW</CaloHitListName>
+        <MCParticleListName>Input</MCParticleListName>
+    	<MinHitsForDisplay>0</MinHitsForDisplay>
+    </algorithm>
+
+
+    <algorithm type = "LArVisualMonitoring">
+        <CaloHitListNames>CaloHitListW</CaloHitListNames>
+	<ClusterListNames>MyFirstClustersW</ClusterListNames>
+        <MCParticleListNames>Input</MCParticleListNames>
+        <SuppressMCParticles>22:0.01 2112:1.0</SuppressMCParticles>
+        <ShowDetector>true</ShowDetector>
+	    <ShowCurrentMCParticles>true</ShowCurrentMCParticles>
+    </algorithm>
+
+	<algorithm type = "MyClusterMergingAlgorithm">
+	    <InputClusterListName>MyFirstClustersW</InputClusterListName>
+    </algorithm>
+
+    <algorithm type = "LArTwoDParticleCreation">
+        <OutputPfoListName>MyFirstParticlesW</OutputPfoListName>
+        <ClusterListNameW>MyFirstClustersW</ClusterListNameW>
+    </algorithm>
+    
+    
+    <!--
+    <algorithm type = "LArTestBeamEventValidation">
+        <CaloHitListName>CaloHitListW</CaloHitListName>
+        <MCParticleListName>Input</MCParticleListName>
+        <PfoListName>MyFirstParticlesW</PfoListName>
+        <PrintAllToScreen>true</PrintAllToScreen>
+        <PrintMatchingToScreen>true</PrintMatchingToScreen>
+        <WriteToTree>false</WriteToTree>
+        <OutputTree>Validation</OutputTree>
+        <OutputFile>Validation.root</OutputFile>
+        <MinPrimaryGoodViews>1</MinPrimaryGoodViews>
+    </algorithm>
+    -->
+    
+    
+    
+    <algorithm type = "LArNeutrinoEventValidation">
+        <CaloHitListName>CaloHitListW</CaloHitListName>
+        <MCParticleListName>Input</MCParticleListName>
+        <PfoListName>MyFirstParticlesW</PfoListName>
+        <UseTrueNeutrinosOnly>false</UseTrueNeutrinosOnly>
+        <PrintAllToScreen>true</PrintAllToScreen>
+        <PrintMatchingToScreen>true</PrintMatchingToScreen>
+        <MinPrimaryGoodViews>1</MinPrimaryGoodViews>
+        <WriteToTree>false</WriteToTree>
+        <OutputTree>Validation</OutputTree>
+        <OutputFile>Validation.root</OutputFile>
+    </algorithm>
+
+   
+
+    <algorithm type = "LArVisualMonitoring">
+	    <ClusterListNames>MyFirstClustersW</ClusterListNames>
+	    <PfoListNames>MyFirstParticlesW</PfoListNames>
+	    <MCParticleListNames>MCParticleList3D</MCParticleListNames>
+	    <SuppressMCParticles>22:0.01 2112:1.0</SuppressMCParticles>
+    </algorithm>
+</pandora>

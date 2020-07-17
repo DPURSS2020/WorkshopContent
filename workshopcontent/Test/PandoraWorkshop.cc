@@ -8,9 +8,12 @@
 
 #include "Api/PandoraApi.h"
 
+#include "workshopcontent/Algorithms/MyTestAlgorithm.h"
+#include "workshopcontent/Algorithms/MyClusterMergingAlgorithm.h"
 #include "larpandoracontent/LArContent.h"
 #include "larpandoracontent/LArPlugins/LArPseudoLayerPlugin.h"
 #include "larpandoracontent/LArPlugins/LArRotationalTransformationPlugin.h"
+#include "larpandoracontent/LArMonitoring/TestBeamEventValidationAlgorithm.h"
 
 #ifdef MONITORING
 #include "TApplication.h"
@@ -61,6 +64,8 @@ bool PrintOptions();
 
 //------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
 int main(int argc, char *argv[])
 {
     try
@@ -80,6 +85,9 @@ int main(int argc, char *argv[])
         PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, LArContent::RegisterBasicPlugins(*pPandora));
         PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, PandoraApi::SetPseudoLayerPlugin(*pPandora, new lar_content::LArPseudoLayerPlugin));
         PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, PandoraApi::SetLArTransformationPlugin(*pPandora, new lar_content::LArRotationalTransformationPlugin));
+	
+	PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, PandoraApi::RegisterAlgorithmFactory(*pPandora, "MyTest", new workshop_content::MyTestAlgorithm::Factory));
+	PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, PandoraApi::RegisterAlgorithmFactory(*pPandora, "MyClusterMergingAlgorithm", new workshop_content::MyClusterMergingAlgorithm::Factory));
 
         PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, PandoraApi::ReadSettings(*pPandora, parameters.m_pandoraSettingsFile));
 
