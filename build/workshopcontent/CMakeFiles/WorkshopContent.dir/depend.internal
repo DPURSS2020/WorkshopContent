@@ -69,7 +69,12 @@ workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgori
  /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Algorithms/MyClusterMergingAlgorithm.cc
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o
  ..//workshopcontent/Algorithms/MyParticleCreationAlgorithm.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArClusterHelper.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArGeometryHelper.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/LArTwoDSlidingFitObjects.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/LArTwoDSlidingFitResult.h
  /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraMonitoring/include/PandoraMonitoringApi.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Api/PandoraApi.h
  /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Api/PandoraContentApi.h
  /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Geometry/DetectorGap.h
  /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Geometry/LArTPC.h

@@ -50,10 +50,13 @@ workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /cvmfs
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /cvmfs/larsoft.opensciencegrid.org/products/root/v6_18_04d/Linux64bit+3.10-2.17-e19-prof/include/strlcpy.h
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArContent.h
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArClusterHelper.h
+workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArGeometryHelper.h
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArMCParticleHelper.h
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArMonitoring/EventValidationBaseAlgorithm.h
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArMonitoring/TestBeamEventValidationAlgorithm.h
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/LArMCParticle.h
+workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/LArTwoDSlidingFitObjects.h
+workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/LArTwoDSlidingFitResult.h
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArPlugins/LArPseudoLayerPlugin.h
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArPlugins/LArRotationalTransformationPlugin.h
 workshopcontent/CMakeFiles/PandoraWorkshop.dir/Test/PandoraWorkshop.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraMonitoring/include/PandoraMonitoringApi.h

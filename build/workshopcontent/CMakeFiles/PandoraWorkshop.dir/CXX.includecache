@@ -15,6 +15,12 @@ larpandoracontent/LArHelpers/LArClusterHelper.h
 ..//workshopcontent/Algorithms/MyParticleCreationAlgorithm.h
 Pandora/Algorithm.h
 ../workshopcontent/Algorithms/Pandora/Algorithm.h
+larpandoracontent/LArHelpers/LArClusterHelper.h
+../workshopcontent/Algorithms/larpandoracontent/LArHelpers/LArClusterHelper.h
+larpandoracontent/LArHelpers/LArGeometryHelper.h
+../workshopcontent/Algorithms/larpandoracontent/LArHelpers/LArGeometryHelper.h
+larpandoracontent/LArObjects/LArTwoDSlidingFitResult.h
+../workshopcontent/Algorithms/larpandoracontent/LArObjects/LArTwoDSlidingFitResult.h
 
 ..//workshopcontent/Algorithms/MyTestAlgorithm.h
 Pandora/Algorithm.h
@@ -430,6 +436,14 @@ sys/types.h
 Objects/Cluster.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/Objects/Cluster.h
 
+/storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArGeometryHelper.h
+Pandora/PandoraEnumeratedTypes.h
+/storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/Pandora/PandoraEnumeratedTypes.h
+Pandora/StatusCodes.h
+/storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/Pandora/StatusCodes.h
+unordered_map
+-
+
 /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArMCParticleHelper.h
 Pandora/PandoraInternal.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/Pandora/PandoraInternal.h
@@ -477,6 +491,24 @@ Persistency/XmlFileReader.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/Persistency/XmlFileReader.h
 Persistency/XmlFileWriter.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/Persistency/XmlFileWriter.h
+
+/storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/LArTwoDSlidingFitObjects.h
+Pandora/StatusCodes.h
+/storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/Pandora/StatusCodes.h
+cmath
+-
+map
+-
+vector
+-
+
+/storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/LArTwoDSlidingFitResult.h
+Api/PandoraApi.h
+/storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/Api/PandoraApi.h
+larpandoracontent/LArObjects/LArTwoDSlidingFitObjects.h
+/storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/larpandoracontent/LArObjects/LArTwoDSlidingFitObjects.h
+unordered_map
+-
 
 /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArPlugins/LArPseudoLayerPlugin.h
 Plugins/PseudoLayerPlugin.h

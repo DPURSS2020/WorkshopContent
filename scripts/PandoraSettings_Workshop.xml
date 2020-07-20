@@ -192,7 +192,9 @@
     
     
     <!-- Now implement MyParticleCreation algorithm with the 'prepared' cluster lists -->
-    <algorithm type = "MyParticleCreation"/>
+    <algorithm type = "MyParticleCreation">
+    <SlidingFitWindow>20</SlidingFitWindow>
+    </algorithm>
     
     
     <!-- Check that everything is going well -->
