@@ -12,6 +12,10 @@ Pandora/Algorithm.h
 larpandoracontent/LArHelpers/LArClusterHelper.h
 ../workshopcontent/Algorithms/larpandoracontent/LArHelpers/LArClusterHelper.h
 
+..//workshopcontent/Algorithms/MyParticleCreationAlgorithm.h
+Pandora/Algorithm.h
+../workshopcontent/Algorithms/Pandora/Algorithm.h
+
 ..//workshopcontent/Algorithms/MyTestAlgorithm.h
 Pandora/Algorithm.h
 ../workshopcontent/Algorithms/Pandora/Algorithm.h
@@ -777,6 +781,8 @@ workshopcontent/Algorithms/MyTestAlgorithm.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Test/workshopcontent/Algorithms/MyTestAlgorithm.h
 workshopcontent/Algorithms/MyClusterMergingAlgorithm.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Test/workshopcontent/Algorithms/MyClusterMergingAlgorithm.h
+workshopcontent/Algorithms/MyParticleCreationAlgorithm.h
+/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Test/workshopcontent/Algorithms/MyParticleCreationAlgorithm.h
 larpandoracontent/LArContent.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Test/larpandoracontent/LArContent.h
 larpandoracontent/LArPlugins/LArPseudoLayerPlugin.h

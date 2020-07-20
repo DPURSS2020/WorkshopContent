@@ -1,3 +1,4 @@
+/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/include/workshopcontent/Algorithms/MyParticleCreationAlgorithm.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/include/workshopcontent/Algorithms/TemplateAlgorithm.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/include/workshopcontent/Algorithms/MyTestAlgorithm.h
 /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/include/workshopcontent/Algorithms/MyClusterMergingAlgorithm.h

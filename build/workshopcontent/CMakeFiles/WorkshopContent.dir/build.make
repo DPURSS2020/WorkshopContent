@@ -70,9 +70,22 @@ workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgori
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgorithm.cc.s"
 	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/workshopcontent && /cvmfs/dune.opensciencegrid.org/products/dune/gcc/v8_2_0/Linux64bit+3.10-2.17/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Algorithms/MyClusterMergingAlgorithm.cc -o CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgorithm.cc.s
 
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: workshopcontent/CMakeFiles/WorkshopContent.dir/flags.make
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: ../workshopcontent/Algorithms/MyParticleCreationAlgorithm.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o"
+	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/workshopcontent && /cvmfs/dune.opensciencegrid.org/products/dune/gcc/v8_2_0/Linux64bit+3.10-2.17/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o -c /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Algorithms/MyParticleCreationAlgorithm.cc
+
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.i"
+	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/workshopcontent && /cvmfs/dune.opensciencegrid.org/products/dune/gcc/v8_2_0/Linux64bit+3.10-2.17/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Algorithms/MyParticleCreationAlgorithm.cc > CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.i
+
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.s"
+	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/workshopcontent && /cvmfs/dune.opensciencegrid.org/products/dune/gcc/v8_2_0/Linux64bit+3.10-2.17/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Algorithms/MyParticleCreationAlgorithm.cc -o CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.s
+
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.o: workshopcontent/CMakeFiles/WorkshopContent.dir/flags.make
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.o: ../workshopcontent/Algorithms/MyTestAlgorithm.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.o"
 	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/workshopcontent && /cvmfs/dune.opensciencegrid.org/products/dune/gcc/v8_2_0/Linux64bit+3.10-2.17/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.o -c /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Algorithms/MyTestAlgorithm.cc
 
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.i: cmake_force
@@ -85,7 +98,7 @@ workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.s: 
 
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.o: workshopcontent/CMakeFiles/WorkshopContent.dir/flags.make
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.o: ../workshopcontent/Algorithms/TemplateAlgorithm.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.o"
 	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/workshopcontent && /cvmfs/dune.opensciencegrid.org/products/dune/gcc/v8_2_0/Linux64bit+3.10-2.17/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.o -c /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Algorithms/TemplateAlgorithm.cc
 
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.i: cmake_force
@@ -99,6 +112,7 @@ workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.s
 # Object files for target WorkshopContent
 WorkshopContent_OBJECTS = \
 "CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgorithm.cc.o" \
+"CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o" \
 "CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.o" \
 "CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.o"
 
@@ -106,6 +120,7 @@ WorkshopContent_OBJECTS = \
 WorkshopContent_EXTERNAL_OBJECTS =
 
 workshopcontent/lib/libWorkshopContent.so.02.03.01: workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgorithm.cc.o
+workshopcontent/lib/libWorkshopContent.so.02.03.01: workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o
 workshopcontent/lib/libWorkshopContent.so.02.03.01: workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.o
 workshopcontent/lib/libWorkshopContent.so.02.03.01: workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.o
 workshopcontent/lib/libWorkshopContent.so.02.03.01: workshopcontent/CMakeFiles/WorkshopContent.dir/build.make
@@ -113,7 +128,7 @@ workshopcontent/lib/libWorkshopContent.so.02.03.01: /storage/epp2/phupqr/Pandora
 workshopcontent/lib/libWorkshopContent.so.02.03.01: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/lib/libLArContent.so
 workshopcontent/lib/libWorkshopContent.so.02.03.01: /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraMonitoring/lib/libPandoraMonitoring.so
 workshopcontent/lib/libWorkshopContent.so.02.03.01: workshopcontent/CMakeFiles/WorkshopContent.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library lib/libWorkshopContent.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library lib/libWorkshopContent.so"
 	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/workshopcontent && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WorkshopContent.dir/link.txt --verbose=$(VERBOSE)
 	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build/workshopcontent && $(CMAKE_COMMAND) -E cmake_symlink_library lib/libWorkshopContent.so.02.03.01 lib/libWorkshopContent.so.02.03 lib/libWorkshopContent.so
 

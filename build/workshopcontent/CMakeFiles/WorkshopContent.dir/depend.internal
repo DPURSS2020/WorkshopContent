@@ -67,6 +67,52 @@ workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgori
  /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Xml/tinystr.h
  /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Xml/tinyxml.h
  /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Algorithms/MyClusterMergingAlgorithm.cc
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o
+ ..//workshopcontent/Algorithms/MyParticleCreationAlgorithm.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraMonitoring/include/PandoraMonitoringApi.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Api/PandoraContentApi.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Geometry/DetectorGap.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Geometry/LArTPC.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Geometry/SubDetector.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Helpers/ClusterFitHelper.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Helpers/MCParticleHelper.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Helpers/XmlHelper.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Managers/GeometryManager.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Managers/PluginManager.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/CaloHit.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/CartesianVector.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/Cluster.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/Helix.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/Histograms.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/MCParticle.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/OrderedCaloHitList.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/ParticleFlowObject.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/Track.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/TrackState.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Objects/Vertex.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/Algorithm.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/AlgorithmHeaders.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/AlgorithmTool.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/ObjectCreation.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/ObjectFactory.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/Pandora.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/PandoraEnumeratedTypes.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/PandoraInputTypes.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/PandoraInternal.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/PandoraObjectFactories.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/PandoraSettings.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/PdgTable.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/Process.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Pandora/StatusCodes.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Plugins/BFieldPlugin.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Plugins/EnergyCorrectionsPlugin.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Plugins/LArTransformationPlugin.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Plugins/ParticleIdPlugin.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Plugins/PseudoLayerPlugin.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Plugins/ShowerProfilePlugin.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Xml/tinystr.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Xml/tinyxml.h
+ /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/workshopcontent/Algorithms/MyParticleCreationAlgorithm.cc
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.o
  ..//workshopcontent/Algorithms/MyTestAlgorithm.h
  /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArClusterHelper.h
