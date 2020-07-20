@@ -35,6 +35,10 @@
 
 	
 
+
+
+
+    <!-- My Exercise 1-4 work
     <algorithm type = "MyTest">
 	    <MyMandatoryString>TestString</MyMandatoryString>
 	    <MyOptionalUnsignedInt>10</MyOptionalUnsignedInt>
@@ -43,12 +47,15 @@
 	    <InputCaloHitListName>CaloHitListW</InputCaloHitListName>
     </algorithm>
 
-
+    
+    -->    
     <algorithm type = "LArMCParticleMonitoring">
         <CaloHitListName>CaloHitListW</CaloHitListName>
         <MCParticleListName>Input</MCParticleListName>
     	<MinHitsForDisplay>0</MinHitsForDisplay>
     </algorithm>
+    <!--
+
 
 
     <algorithm type = "LArVisualMonitoring">
@@ -68,9 +75,12 @@
         <OutputPfoListName>MyFirstParticlesW</OutputPfoListName>
         <ClusterListNameW>MyFirstClustersW</ClusterListNameW>
     </algorithm>
+    -->
     
     
-    <!--
+    
+    
+    <!-- Here for when I use non-neutrino events
     <algorithm type = "LArTestBeamEventValidation">
         <CaloHitListName>CaloHitListW</CaloHitListName>
         <MCParticleListName>Input</MCParticleListName>
@@ -85,7 +95,7 @@
     -->
     
     
-    
+    <!-- Exercise 4 Algorithm for validating success of cluster merging
     <algorithm type = "LArNeutrinoEventValidation">
         <CaloHitListName>CaloHitListW</CaloHitListName>
         <MCParticleListName>Input</MCParticleListName>
@@ -98,13 +108,100 @@
         <OutputTree>Validation</OutputTree>
         <OutputFile>Validation.root</OutputFile>
     </algorithm>
+    -->
 
    
-
+    <!--
     <algorithm type = "LArVisualMonitoring">
 	    <ClusterListNames>MyFirstClustersW</ClusterListNames>
 	    <PfoListNames>MyFirstParticlesW</PfoListNames>
 	    <MCParticleListNames>MCParticleList3D</MCParticleListNames>
 	    <SuppressMCParticles>22:0.01 2112:1.0</SuppressMCParticles>
     </algorithm>
+    -->
+
+	
+	<!-- U View Clusters -->
+    <algorithm type = "LArClusteringParent">
+        <algorithm type = "LArTrackClusterCreation" description = "ClusterFormation"/>
+        <InputCaloHitListName>CaloHitListU</InputCaloHitListName>
+        <ClusterListName>ClustersU</ClusterListName>
+        <ReplaceCurrentCaloHitList>true</ReplaceCurrentCaloHitList>
+        <ReplaceCurrentClusterList>true</ReplaceCurrentClusterList>
+    </algorithm>
+    <algorithm type = "LArLayerSplitting"/>
+    <algorithm type = "LArLongitudinalAssociation"/>
+    <algorithm type = "LArTransverseAssociation"/>
+    <algorithm type = "LArLongitudinalExtension"/>
+    <algorithm type = "LArTransverseExtension"/>
+    <algorithm type = "LArCrossGapsAssociation"/>
+    <algorithm type = "LArCrossGapsExtension"/>
+    <algorithm type = "LArOvershootSplitting"/>
+    <algorithm type = "LArBranchSplitting"/>
+    <algorithm type = "LArKinkSplitting"/>
+    <algorithm type = "LArTrackConsolidation">
+        <algorithm type = "LArSimpleClusterCreation" description = "ClusterRebuilding"/>
+    </algorithm>
+    
+    
+    <!-- V View Clusters -->
+    <algorithm type = "LArClusteringParent">
+        <algorithm type = "LArTrackClusterCreation" description = "ClusterFormation"/>
+        <InputCaloHitListName>CaloHitListV</InputCaloHitListName>
+        <ClusterListName>ClustersV</ClusterListName>
+        <ReplaceCurrentCaloHitList>true</ReplaceCurrentCaloHitList>
+        <ReplaceCurrentClusterList>true</ReplaceCurrentClusterList>
+    </algorithm>
+    <algorithm type = "LArLayerSplitting"/>
+    <algorithm type = "LArLongitudinalAssociation"/>
+    <algorithm type = "LArTransverseAssociation"/>
+    <algorithm type = "LArLongitudinalExtension"/>
+    <algorithm type = "LArTransverseExtension"/>
+    <algorithm type = "LArCrossGapsAssociation"/>
+    <algorithm type = "LArCrossGapsExtension"/>
+    <algorithm type = "LArOvershootSplitting"/>
+    <algorithm type = "LArBranchSplitting"/>
+    <algorithm type = "LArKinkSplitting"/>
+    <algorithm type = "LArTrackConsolidation">
+        <algorithm type = "LArSimpleClusterCreation" description = "ClusterRebuilding"/>
+    </algorithm>
+    
+    
+    <!-- W View Clusters -->
+    <algorithm type = "LArClusteringParent">
+        <algorithm type = "LArTrackClusterCreation" description = "ClusterFormation"/>
+        <InputCaloHitListName>CaloHitListW</InputCaloHitListName>
+        <ClusterListName>ClustersW</ClusterListName>
+        <ReplaceCurrentCaloHitList>true</ReplaceCurrentCaloHitList>
+        <ReplaceCurrentClusterList>true</ReplaceCurrentClusterList>
+    </algorithm>
+    <algorithm type = "LArLayerSplitting"/>
+    <algorithm type = "LArLongitudinalAssociation"/>
+    <algorithm type = "LArTransverseAssociation"/>
+    <algorithm type = "LArLongitudinalExtension"/>
+    <algorithm type = "LArTransverseExtension"/>
+    <algorithm type = "LArCrossGapsAssociation"/>
+    <algorithm type = "LArCrossGapsExtension"/>
+    <algorithm type = "LArOvershootSplitting"/>
+    <algorithm type = "LArBranchSplitting"/>
+    <algorithm type = "LArKinkSplitting"/>
+    <algorithm type = "LArTrackConsolidation">
+        <algorithm type = "LArSimpleClusterCreation" description = "ClusterRebuilding"/>
+    </algorithm>
+    
+    
+    
+    <!-- Now implement MyParticleCreation algorithm with the 'prepared' cluster lists -->
+    <algorithm type = "MyParticleCreation"/>
+    
+    
+    <!-- Check that everything is going well -->
+    <algorithm type = "LArVisualMonitoring">
+    <ClusterListNames>ClustersU ClustersV ClustersW</ClusterListNames>
+    <PfoListNames>MyParticles</PfoListNames>
+    <MCParticleListNames>Input</MCParticleListNames>
+    <SuppressMCParticles>22:0.01 2112:1.0</SuppressMCParticles>
+    </algorithm>
+
+
 </pandora>

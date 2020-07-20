@@ -10,6 +10,7 @@
 
 #include "workshopcontent/Algorithms/MyTestAlgorithm.h"
 #include "workshopcontent/Algorithms/MyClusterMergingAlgorithm.h"
+#include "workshopcontent/Algorithms/MyParticleCreationAlgorithm.h"
 #include "larpandoracontent/LArContent.h"
 #include "larpandoracontent/LArPlugins/LArPseudoLayerPlugin.h"
 #include "larpandoracontent/LArPlugins/LArRotationalTransformationPlugin.h"
@@ -88,6 +89,7 @@ int main(int argc, char *argv[])
 	
 	PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, PandoraApi::RegisterAlgorithmFactory(*pPandora, "MyTest", new workshop_content::MyTestAlgorithm::Factory));
 	PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, PandoraApi::RegisterAlgorithmFactory(*pPandora, "MyClusterMergingAlgorithm", new workshop_content::MyClusterMergingAlgorithm::Factory));
+	PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, PandoraApi::RegisterAlgorithmFactory(*pPandora, "MyParticleCreation", new workshop_content::MyParticleCreationAlgorithm::Factory));
 
         PANDORA_THROW_RESULT_IF(pandora::STATUS_CODE_SUCCESS, !=, PandoraApi::ReadSettings(*pPandora, parameters.m_pandoraSettingsFile));
 

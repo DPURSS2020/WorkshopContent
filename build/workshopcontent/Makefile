@@ -213,6 +213,33 @@ Algorithms/MyClusterMergingAlgorithm.cc.s:
 	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build && $(MAKE) -f workshopcontent/CMakeFiles/WorkshopContent.dir/build.make workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgorithm.cc.s
 .PHONY : Algorithms/MyClusterMergingAlgorithm.cc.s
 
+Algorithms/MyParticleCreationAlgorithm.o: Algorithms/MyParticleCreationAlgorithm.cc.o
+
+.PHONY : Algorithms/MyParticleCreationAlgorithm.o
+
+# target to build an object file
+Algorithms/MyParticleCreationAlgorithm.cc.o:
+	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build && $(MAKE) -f workshopcontent/CMakeFiles/WorkshopContent.dir/build.make workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o
+.PHONY : Algorithms/MyParticleCreationAlgorithm.cc.o
+
+Algorithms/MyParticleCreationAlgorithm.i: Algorithms/MyParticleCreationAlgorithm.cc.i
+
+.PHONY : Algorithms/MyParticleCreationAlgorithm.i
+
+# target to preprocess a source file
+Algorithms/MyParticleCreationAlgorithm.cc.i:
+	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build && $(MAKE) -f workshopcontent/CMakeFiles/WorkshopContent.dir/build.make workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.i
+.PHONY : Algorithms/MyParticleCreationAlgorithm.cc.i
+
+Algorithms/MyParticleCreationAlgorithm.s: Algorithms/MyParticleCreationAlgorithm.cc.s
+
+.PHONY : Algorithms/MyParticleCreationAlgorithm.s
+
+# target to generate assembly for a file
+Algorithms/MyParticleCreationAlgorithm.cc.s:
+	cd /storage/epp2/phupqr/Pandora.repos/Workshop/WorkshopContent/build && $(MAKE) -f workshopcontent/CMakeFiles/WorkshopContent.dir/build.make workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.s
+.PHONY : Algorithms/MyParticleCreationAlgorithm.cc.s
+
 Algorithms/MyTestAlgorithm.o: Algorithms/MyTestAlgorithm.cc.o
 
 .PHONY : Algorithms/MyTestAlgorithm.o
@@ -311,6 +338,9 @@ help:
 	@echo "... Algorithms/MyClusterMergingAlgorithm.o"
 	@echo "... Algorithms/MyClusterMergingAlgorithm.i"
 	@echo "... Algorithms/MyClusterMergingAlgorithm.s"
+	@echo "... Algorithms/MyParticleCreationAlgorithm.o"
+	@echo "... Algorithms/MyParticleCreationAlgorithm.i"
+	@echo "... Algorithms/MyParticleCreationAlgorithm.s"
 	@echo "... Algorithms/MyTestAlgorithm.o"
 	@echo "... Algorithms/MyTestAlgorithm.i"
 	@echo "... Algorithms/MyTestAlgorithm.s"

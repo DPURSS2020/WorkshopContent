@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgorithm.cc.o"
+  "CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o"
   "CMakeFiles/WorkshopContent.dir/Algorithms/MyTestAlgorithm.cc.o"
   "CMakeFiles/WorkshopContent.dir/Algorithms/TemplateAlgorithm.cc.o"
   "lib/libWorkshopContent.pdb"
