@@ -61,6 +61,7 @@ const pandora::Cluster *const pClusterW) const;
     std::string m_inputClusterListNameU;
     std::string m_inputClusterListNameV;
     std::string m_inputClusterListNameW;
+    int         m_clusterHitsThreshold;
     int         m_slidingFitWindow;
     int         m_minClusterCaloHits;
 	int         m_nSamplingPoints;

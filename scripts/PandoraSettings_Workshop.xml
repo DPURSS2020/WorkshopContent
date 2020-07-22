@@ -196,7 +196,7 @@
 	<InputClusterListNameU>ClustersU</InputClusterListNameU>
 	<InputClusterListNameV>ClustersV</InputClusterListNameV>
 	<InputClusterListNameW>ClustersW</InputClusterListNameW>
-    <SlidingFitWindow>20</SlidingFitWindow>
+    	<SlidingFitWindow>20</SlidingFitWindow>
     </algorithm>
     
     
