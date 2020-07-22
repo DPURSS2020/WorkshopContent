@@ -68,7 +68,12 @@ workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgori
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyClusterMergingAlgorithm.cc.o: ../workshopcontent/Algorithms/MyClusterMergingAlgorithm.cc
 
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: ../workshopcontent/Algorithms/MyParticleCreationAlgorithm.h
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArClusterHelper.h
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArHelpers/LArGeometryHelper.h
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/LArTwoDSlidingFitObjects.h
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/LArContent/larpandoracontent/LArObjects/LArTwoDSlidingFitResult.h
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraMonitoring/include/PandoraMonitoringApi.h
+workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Api/PandoraApi.h
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Api/PandoraContentApi.h
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Geometry/DetectorGap.h
 workshopcontent/CMakeFiles/WorkshopContent.dir/Algorithms/MyParticleCreationAlgorithm.cc.o: /storage/epp2/phupqr/Pandora.repos/Workshop/PandoraSDK/include/Geometry/LArTPC.h

@@ -192,9 +192,29 @@
     
     
     <!-- Now implement MyParticleCreation algorithm with the 'prepared' cluster lists -->
-    <algorithm type = "MyParticleCreation"/>
+    <algorithm type = "MyParticleCreation">
+	<InputClusterListNameU>ClustersU</InputClusterListNameU>
+	<InputClusterListNameV>ClustersV</InputClusterListNameV>
+	<InputClusterListNameW>ClustersW</InputClusterListNameW>
+    	<SlidingFitWindow>20</SlidingFitWindow>
+    </algorithm>
     
-    
+	    
+    <!-- Exercise 4 Algorithm for validating success of cluster merging -->
+    <algorithm type = "LArNeutrinoEventValidation">
+        <CaloHitListName>CaloHitList2D</CaloHitListName>
+        <MCParticleListName>Input</MCParticleListName>
+        <PfoListName>MyParticles</PfoListName>
+        <UseTrueNeutrinosOnly>false</UseTrueNeutrinosOnly>
+        <PrintAllToScreen>true</PrintAllToScreen>
+        <PrintMatchingToScreen>true</PrintMatchingToScreen>
+        <WriteToTree>false</WriteToTree>
+        <OutputTree>Validation</OutputTree>
+        <OutputFile>Validation.root</OutputFile>
+    </algorithm>
+
+
+
     <!-- Check that everything is going well -->
     <algorithm type = "LArVisualMonitoring">
     <ClusterListNames>ClustersU ClustersV ClustersW</ClusterListNames>
