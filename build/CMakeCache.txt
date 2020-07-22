@@ -124,7 +124,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //CMAKE_MODULE_PATH
-CMAKE_MODULE_PATH:PATH=/storage/epp2/phupqr/Pandora.repos/Workshop/PandoraPFA/cmakemodules;/cvmfs/larsoft.opensciencegrid.org/products/root/v6_18_04d/Linux64bit+3.10-2.17-e19-prof/etc/cmake;/cvmfs/fermilab.opensciencegrid.org/products/larsoft/root/v6_18_04d/Linux64bit+3.10-2.17-e19-prof/etc/cmake;/cvmfs/fermilab.opensciencegrid.org/products/larsoft/root/v6_18_04d/Linux64bit+3.10-2.17-e19-prof/etc/cmake
+CMAKE_MODULE_PATH:PATH=/storage/epp2/phupqr/Pandora.repos/Workshop/PandoraPFA/cmakemodules;/cvmfs/larsoft.opensciencegrid.org/products/root/v6_18_04d/Linux64bit+3.10-2.17-e19-prof/etc/cmake;/cvmfs/fermilab.opensciencegrid.org/products/larsoft/root/v6_18_04d/Linux64bit+3.10-2.17-e19-prof/etc/cmake;/cvmfs/larsoft.opensciencegrid.org/products/root/v6_18_04d/Linux64bit+3.10-2.17-e19-prof/etc/cmake
 
 //Path to a program.
 CMAKE_NM:FILEPATH=/usr/bin/nm
