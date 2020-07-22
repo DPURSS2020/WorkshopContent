@@ -19,7 +19,8 @@ MyParticleCreationAlgorithm::MyParticleCreationAlgorithm() :
     m_inputClusterListNameU(),
     m_inputClusterListNameV(),
     m_inputClusterListNameW(),
-    m_slidingFitWindow(20)
+    m_slidingFitWindow(20),
+    m_nSamplingPoints(100)
     
 {
 }
@@ -50,6 +51,9 @@ StatusCode MyParticleCreationAlgorithm::ReadSettings(const TiXmlHandle xmlHandle
 {
     // Read settings from xml file here
     PANDORA_RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, XmlHelper::ReadValue(xmlHandle, "SlidingFitWindow", m_slidingFitWindow));
+	PANDORA_RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, XmlHelper::ReadValue(xmlHandle, "InputClusterListNameU", m_inputClusterListNameU));
+	PANDORA_RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, XmlHelper::ReadValue(xmlHandle, "InputClusterListNameV", m_inputClusterListNameV));
+	PANDORA_RETURN_RESULT_IF(STATUS_CODE_SUCCESS, !=, XmlHelper::ReadValue(xmlHandle, "InputClusterListNameW", m_inputClusterListNameW));
     return STATUS_CODE_SUCCESS;
 }
 
@@ -112,53 +116,75 @@ const Cluster *const pClusterW) const
 {
     try
     {
+        std::cout << "Initializing fitResults... " << std::endl;
+        std::cout << "1" << std::endl;
         const float slidingFitPitch(LArGeometryHelper::GetWireZPitch(this->GetPandora()));
+        std::cout << slidingFitPitch << std::endl;
+        std::cout << "2 " << pClusterU <<  std::endl;
         const TwoDSlidingFitResult fitResultU(pClusterU, m_slidingFitWindow, slidingFitPitch);
+        std::cout << "3 " << pClusterV << std::endl;
         const TwoDSlidingFitResult fitResultV(pClusterV, m_slidingFitWindow, slidingFitPitch);
+        std::cout << "4 " << pClusterW << std::endl;
         const TwoDSlidingFitResult fitResultW(pClusterW, m_slidingFitWindow, slidingFitPitch);
+        std::cout << "5 " << std::endl;
+        
+        
         // ATTN Presence of more than one “fit segment” means complicated trajectory, winding back and forth in x (don’t treat here)
         if ((1 != fitResultU.GetFitSegmentList().size()) ||
             (1 != fitResultV.GetFitSegmentList().size()) ||
             (1 != fitResultW.GetFitSegmentList().size()))
         {
+
             return 0.f;
         }
         // TODO - Make decisions
+        std::cout << "Assigning fitSegments... " << std::endl;
         
-        /*
         const FitSegment &fitSegmentU(fitResultU.GetFitSegmentList().front());
         const FitSegment &fitSegmentV(fitResultV.GetFitSegmentList().front());
         const FitSegment &fitSegmentW(fitResultW.GetFitSegmentList().front());
-        const float x(std::max(fitSegmentU.GetMinX(), std::max(fitSegmentV.GetMinX(), fitSegmentW.GetMinX())));
-        CartesianVector fitUVector(0.f, 0.f, 0.f), fitVVector(0.f, 0.f, 0.f), fitWVector(0.f, 0.f, 0.f);
-        CartesianVector fitUDirection(0.f, 0.f, 0.f), fitVDirection(0.f, 0.f, 0.f), fitWDirection(0.f, 0.f, 0.f);
-        if ((STATUS_CODE_SUCCESS != fitResultU.GetTransverseProjection(x, fitSegmentU, fitUVector, fitUDirection)) ||
-        (STATUS_CODE_SUCCESS != fitResultV.GetTransverseProjection(x, fitSegmentV, fitVVector, fitVDirection)))
-        {
-            return 0.f;
-        }
-        const float u(fitUVector.GetZ()), v(fitVVector.GetZ());
-        const float uv2w(LArGeometryHelper::MergeTwoPositions(this->GetPandora(), TPC_VIEW_U, TPC_VIEW_V, u, v));
-        const CartesianVector predictionW(x, 0.f, uv2w);
+
+        const unsigned int nPoints(m_nSamplingPoints);
+        const float minX(std::max(fitSegmentU.GetMinX(), std::max(fitSegmentV.GetMinX(), fitSegmentW.GetMinX())));
+        const float maxX(std::min(fitSegmentU.GetMaxX(), std::min(fitSegmentV.GetMaxX(), fitSegmentW.GetMaxX())));
+        
+        std::cout << "Setting Eve Parameters... " << std::endl;
+        
         PandoraMonitoringApi::SetEveDisplayParameters(this->GetPandora(), false, DETECTOR_VIEW_XZ, -1.f, -1.f, 1.f);
-        PandoraMonitoringApi::AddMarkerToVisualization(this->GetPandora(), &fitUVector, "FitU", RED, 2);
-        PandoraMonitoringApi::AddMarkerToVisualization(this->GetPandora(), &fitVVector, "FitV", GREEN, 2);
-        PandoraMonitoringApi::AddMarkerToVisualization(this->GetPandora(), &predictionW, "PredictionW", BLUE, 2);
+        for (unsigned int n = 0; n <= nPoints; ++n)
+        {
+            const float x(minX + (maxX - minX) * static_cast<float>(n) / static_cast<float>(nPoints));
+            CartesianVector fitUVector(0.f, 0.f, 0.f), fitVVector(0.f, 0.f, 0.f), fitWVector(0.f, 0.f, 0.f);
+            CartesianVector fitUDirection(0.f, 0.f, 0.f), fitVDirection(0.f, 0.f, 0.f), fitWDirection(0.f, 0.f, 0.f);
+            std::cout << "Trying GetTransverseProjection... " << std::endl;
+            if ((STATUS_CODE_SUCCESS != fitResultU.GetTransverseProjection(x, fitSegmentU, fitUVector, fitUDirection)) ||
+            (STATUS_CODE_SUCCESS != fitResultV.GetTransverseProjection(x, fitSegmentV, fitVVector, fitVDirection)))
+            {
+                continue;
+            }
+            std::cout << "Starting Prediction... " << std::endl;
+            const float u(fitUVector.GetZ()), v(fitVVector.GetZ());
+            const float uv2w(LArGeometryHelper::MergeTwoPositions(this->GetPandora(), TPC_VIEW_U, TPC_VIEW_V, u, v));
+            const CartesianVector predictionW(x, 0.f, uv2w);
+            std::cout << "---Adding Marker---" << std::endl;
+            PandoraMonitoringApi::AddMarkerToVisualization(this->GetPandora(), &predictionW, "PredictionW", CYAN, 1);
+            std::cout << "---Marker Successfully Added---" << std::endl;
+        }
         ClusterList clusterListU, clusterListV, clusterListW;
-        clusterListU.insert(pClusterU); clusterListV.insert(pClusterV); clusterListW.insert(pClusterW);
+        clusterListU.push_back(pClusterU); clusterListV.push_back(pClusterV); clusterListW.push_back(pClusterW);
         PandoraMonitoringApi::VisualizeClusters(this->GetPandora(), &clusterListU, "ClusterU", RED);
         PandoraMonitoringApi::VisualizeClusters(this->GetPandora(), &clusterListV, "ClusterV", GREEN);
         PandoraMonitoringApi::VisualizeClusters(this->GetPandora(), &clusterListW, "ClusterW", BLUE);
 
         PandoraMonitoringApi::ViewEvent(this->GetPandora());
-        */
         
+      
     }
     catch (const StatusCodeException &statusCodeException)
     {
         std::cout << "MyParticleCreationAlgorithm::AreClustersAssociated " << statusCodeException.ToString() << std::endl;
     }
-    return 0.f;
+    return 1.f;
 }
 
 

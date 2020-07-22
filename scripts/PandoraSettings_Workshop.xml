@@ -193,6 +193,9 @@
     
     <!-- Now implement MyParticleCreation algorithm with the 'prepared' cluster lists -->
     <algorithm type = "MyParticleCreation">
+	<InputClusterListNameU>ClustersU</InputClusterListNameU>
+	<InputClusterListNameV>ClustersV</InputClusterListNameV>
+	<InputClusterListNameW>ClustersW</InputClusterListNameW>
     <SlidingFitWindow>20</SlidingFitWindow>
     </algorithm>
     
