@@ -41,7 +41,7 @@ private:
     unsigned int           m_myOptionalUnsignedInt;
     pandora::FloatVector   m_myMandatoryFloatVector;
 
-	std::string 		   m_outputClusterListName;
+    std::string 		   m_outputClusterListName;
 	unsigned int 		   m_nHitsPerCluster;
 	
 	std::string            m_inputCaloHitListName;

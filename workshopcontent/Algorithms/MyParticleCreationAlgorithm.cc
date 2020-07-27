@@ -118,18 +118,14 @@ const Cluster *const pClusterW) const
 {
     try
     {
+	    //Threshold of hits for clusters (m_clusterHitsThreshold)
         if ( !(pClusterU->GetNCaloHits() < m_clusterHitsThreshold || pClusterV->GetNCaloHits() < m_clusterHitsThreshold || pClusterW->GetNCaloHits() < m_clusterHitsThreshold) ){
-            std::cout << "Initializing fitResults... " << std::endl;
-            std::cout << "1" << std::endl;
+
             const float slidingFitPitch(LArGeometryHelper::GetWireZPitch(this->GetPandora()));
-            std::cout << slidingFitPitch << std::endl;
-            std::cout << "2 " << pClusterU <<  std::endl;
             const TwoDSlidingFitResult fitResultU(pClusterU, m_slidingFitWindow, slidingFitPitch);
-            std::cout << "3 " << pClusterV << std::endl;
             const TwoDSlidingFitResult fitResultV(pClusterV, m_slidingFitWindow, slidingFitPitch);
-            std::cout << "4 " << pClusterW << std::endl;
             const TwoDSlidingFitResult fitResultW(pClusterW, m_slidingFitWindow, slidingFitPitch);
-            std::cout << "5 " << std::endl;
+            
             
             
             // ATTN Presence of more than one “fit segment” means complicated trajectory, winding back and forth in x (don’t treat here)
@@ -199,7 +195,7 @@ const Cluster *const pClusterW) const
                 const float x(minX + (maxX - minX) * static_cast<float>(n) / static_cast<float>(nPoints));
                 CartesianVector fitUVector(0.f, 0.f, 0.f), fitVVector(0.f, 0.f, 0.f), fitWVector(0.f, 0.f, 0.f);
                 CartesianVector fitUDirection(0.f, 0.f, 0.f), fitVDirection(0.f, 0.f, 0.f), fitWDirection(0.f, 0.f, 0.f);
-                std::cout << "Trying GetTransverseProjection... " << std::endl;
+
                 if ((STATUS_CODE_SUCCESS != fitResultU.GetTransverseProjection(x, fitSegmentU, fitUVector, fitUDirection)) ||
                 (STATUS_CODE_SUCCESS != fitResultV.GetTransverseProjection(x, fitSegmentV, fitVVector, fitVDirection)))
                 {

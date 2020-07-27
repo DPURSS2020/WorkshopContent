@@ -6,6 +6,9 @@
  *  $Log: $
  */
 
+
+//Hey
+
 #include "Pandora/AlgorithmHeaders.h"
 
 #include "workshopcontent/Algorithms/MyClusterMergingAlgorithm.h"
@@ -159,7 +162,7 @@ bool MyClusterMergingAlgorithm::AreClustersAssociated(const Cluster *const pPare
 		if (((parentDaughterImpactL < m_maxImpactL) && (parentDaughterImpactT < m_maxImpactT)) ||
 		((daughterParentImpactL < m_maxImpactL) && (daughterParentImpactT < m_maxImpactT)))
 		{
-		    std::cout << "-Found two associated clusters-" <<std::endl;
+		    std::cout << "-Found two associated clusters-" << std::endl;
 			return true;
 		}
 	}
