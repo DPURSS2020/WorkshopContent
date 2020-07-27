@@ -64,7 +64,7 @@ const pandora::Cluster *const pClusterW) const;
     int         m_clusterHitsThreshold;
     int         m_slidingFitWindow;
     int         m_minClusterCaloHits;
-	int         m_nSamplingPoints;
+    int         m_nSamplingPoints;
     
     
 };
